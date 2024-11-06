@@ -2,10 +2,13 @@
 Don's Kitchen Mobile App.
 
 # Features
-* Share Projects
-* Message other developers
-* Rate others work
-* Search other developers
+* Interactive Menu
+* Detailed Descriptions
+* Customizable Orders
+* Multiple Payment Methods
+* Personalized Recommendations
+* Dark Themed UI
+* Loyalty Programs & Food Descriptions
 
 # Course Overview
 * Basic React Native Components
