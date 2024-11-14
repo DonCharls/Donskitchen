@@ -7,7 +7,7 @@ import { TouchableOpacity } from 'react-native';
 const tac = () => {
   const navigation = useNavigation();
   return (
-    <SafeAreaView className="bg-primary h-full">
+    <SafeAreaView className="bg-primary2 h-full">
     <ScrollView>
       <View className="flex mx-3">
         <Text className="text-2xl italic">Terms and Conditions</Text>

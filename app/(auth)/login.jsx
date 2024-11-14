@@ -1,13 +1,20 @@
 import { StyleSheet, Text, View, ScrollView, Image, TextInput, TouchableOpacity } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context';
 import React, { useState } from 'react'
-import { Link, useNavigation } from 'expo-router';
+import { Link, router } from 'expo-router';
 import Checkbox from 'expo-checkbox';
 import { images } from '../../constants';
+import CustomButton from '../../components/CustomButton';
+import FormField from '../../components/FormField';
 
 const login = () => {
-  const navigation = useNavigation();
   const [isChecked, setCheck] = useState(false);
+  const [form, setForm]=useState({
+    email: '',
+    password:''
+  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const submit = () =>{ router.push('../(tabs)/home') }
   return (
     <SafeAreaView className="bg-primary2">
 
@@ -21,22 +28,20 @@ const login = () => {
       </View>
 
         <View className="flex mx-8 my-10">
-        <Text className="text-1xl font-bold font-pregular">Email Address</Text>
-        <TextInput
-          backgroundColor='white'
-          placeholder='Enter your email address'
-          placeholderTextColor={'gray'}
-          className={`mt-2 rounded-md pl-[14px] h-10`}
-                        />
+        <FormField
+        title="Email"
+        value={form.email}
+        placeholder='   Enter your email adress'
+        handleChangeText={(e) => setForm({ ...form, email: e })}
+      />
 
-          <Text className="text-1xl font-bold font-pregular mt-6">Password</Text>
-          <TextInput
-          backgroundColor='white'
-          secureTextEntry
-          placeholder='Enter your password'
-          placeholderTextColor={'gray'}
-          className={`mt-2 rounded-md pl-[14px] h-10`}
-                        />
+      <View className="mt-5"></View>
+      <FormField
+        title="Password"
+        value={form.password}
+        placeholder='   Enter your password'
+        handleChangeText={(e) => setForm({ ...form, password: e })}
+      />
       </View>
       <View className="ml-8 flex-row" style={{bottom:34}}>
       <Checkbox value={isChecked} color={isChecked? "#D9753B":undefined} onValueChange={setCheck}  />
@@ -48,14 +53,13 @@ const login = () => {
           </Text>
       </View>
 
-      <View style={{width: 300, left: 30, bottom: 20}} classname="space-y-4">
-            <TouchableOpacity 
-            onPress={() => navigation.navigate('(tabs)')}
-            className="py-3 bg-amber-600 rounded-xl mt-5">
-              <Text style={{fontSize: 16, fontWeight: "bold", marginLeft: 125}}>
-                Log In
-              </Text>
-            </TouchableOpacity>
+      <View style={{width: 300, left: 30, bottom: 20, marginTop: 20}} classname="space-y-4">
+          <CustomButton
+            title="Sign In"
+            handlePress={submit}
+            containerStyles={{width: 300}}
+          >
+          </CustomButton>
         </View>
 
         <View className="flex-row justify-center bottom-2">

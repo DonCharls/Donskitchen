@@ -1,13 +1,12 @@
 import { Text, View, Image, ScrollView, TouchableOpacity} from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context';
 import React from 'react'
-import { Link, useNavigation } from 'expo-router';
-import { images } from '../../constants';
-import CustomButton from '../../components/CustomButton';
+import { Link, router } from 'expo-router';
+import { images } from '../constants';
+import CustomButton from '../components/CustomButton';
 
 
 const index = () => {
-  const navigation = useNavigation();
   return (
     <SafeAreaView className="bg-primary2 h-full">
       <ScrollView>
@@ -19,9 +18,9 @@ const index = () => {
         <Text className="text-1xl font-plight mt-2">Fulfill your comfort korean food cravings.</Text>
 
         <View style={{width: 250, marginTop: 80}} classname="space-y-4">
-            <CustomButton
+          <CustomButton
             title="Sign Up"
-            handlePress={() => router.push('/indextwo')}
+            handlePress={() => router.push('/signup')}
             containerStyles={{width: 250}}
           >
           </CustomButton>

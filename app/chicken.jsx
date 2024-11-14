@@ -12,7 +12,7 @@ const chicken = () => {
     <View style={{display: 'flex', flexDirection: 'row', backgroundColor:"#FEECC4"}}>
         <TouchableOpacity onPress={() => navigation.navigate('foods')}>
         <Image
-          source={require('../../assets/icons/back.png')} 
+          source={require('../assets/icons/back.png')} 
           style={{height: 25, width: 25, marginLeft: 20, marginTop: 5, marginBottom: 10}}/>
         </TouchableOpacity>
         <Text className="font-namsterdam text-3xl" style={{left: 95}}>Chicken</Text>
@@ -20,7 +20,7 @@ const chicken = () => {
     <View className="items-center">
         <Text className="mt-5 font-teko" style={{fontSize: 50, marginBottom: 15}}>Korean Spicy Chicken</Text>
     <Image
-          source={require('../../assets/pictures/spicychickenbg.jpg')} 
+          source={require('../assets/pictures/spicychickenbg.jpg')} 
           style={{height: 250, width: 250, borderRadius: 30, marginBottom: 40}}/>
     </View>
     <View className="bg-white items-center">
