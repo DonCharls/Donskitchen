@@ -1,4 +1,3 @@
-<img src="assets/screenshots/appicon.png">  
 # Don's Kitchen
 Don's Kitchen Mobile App.
 
@@ -28,7 +27,7 @@ Don's Kitchen Mobile App.
 # Sign Up Screen
 <img src="assets/screenshots/signup.png">  
 
-# Sign In Screen
+# Log In Screen
 <img src="assets/screenshots/login.png">  
 
 # Walkthrough  
